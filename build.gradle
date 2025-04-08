@@ -27,7 +27,7 @@ ext{
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
-    implementation 'io.appium:java-client:8.3.0'
+    testImplementation 'io.appium:java-client:8.3.0'
     testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}"
     testImplementation "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}"
     testImplementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}"

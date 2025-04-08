@@ -24,20 +24,20 @@ public class SampleTest {
                 .setPlatformName("Android")
                 .setDeviceName("emulator-5554")
                 .setPlatformVersion("16.0")
-                .setAppPackage("com.google.android.youtube")
-                .setAppActivity("com.google.android.youtube.HomeActivity")
+                .setApp("https://github.com/saucelabs/my-demo-app-android/releases/download/2.2.0/mda-2.2.0-25.apk")
+                .setIsHeadless(false)
                 .setAutoGrantPermissions(true);
+        options.setAppWaitActivity("com.saucelabs.mydemoapp.android.view.activities.MainActivity");
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);
-
     }
 
     @Test
     void sampleTestSerenity(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement shortsButton = wait.until(
-                ExpectedConditions.presenceOfElementLocated(AppiumBy.xpath("//*[contains(@text,'Shorts')]"))
+        WebElement titleProduct = wait.until(
+                ExpectedConditions.presenceOfElementLocated(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"))
         );
-        shortsButton.click();
+        titleProduct.click();
     }
 }
