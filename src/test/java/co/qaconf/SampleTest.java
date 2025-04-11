@@ -22,10 +22,10 @@ public class SampleTest {
     public void configuracionAppium() throws MalformedURLException {
         UiAutomator2Options options = new UiAutomator2Options()
                 .setPlatformName("Android")
-                .setDeviceName("emulator-5554")
-                .setPlatformVersion("16.0")
+                .setDeviceName("R5CR702DMDR")
+                .setPlatformVersion("14")
                 .setApp("https://github.com/saucelabs/my-demo-app-android/releases/download/2.2.0/mda-2.2.0-25.apk")
-                .setIsHeadless(false)
+                .setIsHeadless(true)
                 .setAutoGrantPermissions(true);
         options.setAppWaitActivity("com.saucelabs.mydemoapp.android.view.activities.MainActivity");
 
