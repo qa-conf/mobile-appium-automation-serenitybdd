@@ -1,5 +1,6 @@
-package co.qaconf.stedefinitions;
+package co.qaconf.stepdefinitions;
 
+import co.qaconf.interactions.Abrir;
 import co.qaconf.tasks.BuscarVideo;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.screenplay.actions.Click;
@@ -26,4 +27,12 @@ public class BuscarVideoEnYoutube {
         );
     }
 
+    @Test
+    public void abrirOpcionesMenu(){
+        OnStage.setTheStage(new OnlineCast());
+        theActorCalled("Juan").attemptsTo(
+                Abrir.laOpcion().suscripciones(),
+                Abrir.laOpcion().principal()
+        );
+    }
 }
