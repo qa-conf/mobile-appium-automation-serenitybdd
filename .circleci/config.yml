@@ -1,0 +1,97 @@
+version: 2.1
+
+jobs:
+  setup-tools:
+    docker:
+      - image: cimg/android:2023.09
+    environment:
+      ANDROID_SDK_ROOT: /home/circleci/android-sdk
+      JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
+    steps:
+      - run:
+          name: Clonar repositorio vía HTTPS y cambiar a rama
+          command: |
+            git clone --branch circleci https://github.com/qa-conf/mobile-appium-automation-serenitybdd.git .
+
+      - run:
+          name: Instalar Node.js y Appium
+          command: |
+            curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+            sudo npm install -g appium
+
+      - run:
+          name: Validar herramientas instaladas
+          command: |
+            echo "Version de Java"
+            java -version
+            echo "Version de Node"
+            node -v
+            echo "Version de Appium"
+            appium -v
+            echo "Version de Gradle"
+            gradle -v
+            echo "Version de ADB"
+            adb version
+            echo "Version de Emulator"
+            emulator -version || true
+
+      - run:
+          name: Instalar imagen del sistema Android 30
+          command: |
+            export JAVA_OPTS="-Djavax.xml.accessExternalSchema=all"
+            echo "Instalando imagen: system-images;android-30;google_apis;x86"
+            yes | /home/circleci/android-sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root=/home/circleci/android-sdk --no_https "system-images;android-30;google_apis;x86" || true
+
+      - run:
+          name: Arrancar emulador y ejecutar tests
+          command: |
+            # Crear AVD y arrancar el emulador en modo software
+            echo "Creando AVD 'test-emulator'"
+            echo "no" | avdmanager create avd -n test-emulator -k "system-images;android-30;google_apis;x86" --device "pixel"
+            echo "Arrancando emulador en modo software"
+            emulator -avd test-emulator -no-window -no-audio -no-boot-anim -no-snapshot -gpu swiftshader_indirect -accel off &
+            EMULATOR_PID=$!
+            echo "Esperando a que el emulador arranque..."
+            sleep 120
+            adb wait-for-device
+            adb devices
+
+            # Instalar el driver de UIAutomator2 y validar dependencias con Appium Doctor
+            echo "Instalando el driver de UIAutomator2..."
+            appium driver install uiautomator2
+            echo "Instalando Appium Doctor..."
+            sudo npm install -g appium-doctor
+            appium-doctor --android
+
+            # Arrancar Appium server con los flags requeridos
+            echo "Arrancando Appium server en segundo plano..."
+            nohup appium --address 127.0.0.1 --allow-cors > appium.log 2>&1 &
+            sleep 30
+            tail -n 20 appium.log
+
+            echo "VALIDAR EMULADOR DE NUEVO"
+            adb devices
+            echo "VALIDAR ESTATUS"
+            adb -s emulator-5554 get-state
+            echo "VALIDAR BOOT"
+            adb -s emulator-5554 shell getprop sys.boot_completed
+            echo "VALIDAR SCREEN"
+            adb -s emulator-5554 shell getprop init.svc.bootanim
+            
+            echo "VALIDAR APPIUM"
+            curl http://127.0.0.1:4723/status
+
+            # Ejecutar pruebas con Gradle
+            echo "Ejecutando tests con Gradle..."
+            ./gradlew test --info --stacktrace
+
+            # Finalizar el emulador al terminar los tests
+            echo "Finalizando el emulador..."
+            kill $EMULATOR_PID
+
+workflows:
+  version: 2
+  setup-and-test:
+    jobs:
+      - setup-tools
