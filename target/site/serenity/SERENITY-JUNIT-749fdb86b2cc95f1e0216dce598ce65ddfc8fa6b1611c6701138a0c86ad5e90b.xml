@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="co.qaconf.stepdefinitions.BuscarVideoEnYoutube" skipped="0" tests="1" time="0.01" timestamp="2025-04-15 12:30:59"><testcase classname="co.qaconf.stepdefinitions.BuscarVideoEnYoutube" name="Buscar video futbol en youtube"><error message="WebDriver was unable to create a new instance of type class io.appium.java_client.AppiumDriver&#10;WebDriver reported the following message: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. &#10;Host info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.80.30'&#10;See below for more details." type="net.thucydides.core.webdriver.DriverConfigurationError">WebDriver was unable to create a new instance of type class io.appium.java_client.AppiumDriver
+WebDriver reported the following message: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.80.30'
+See below for more details.</error><system-err>WebDriver was unable to create a new instance of type class io.appium.java_client.AppiumDriver
+WebDriver reported the following message: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.80.30'
+See below for more details.
+co.qaconf.stepdefinitions.BuscarVideoEnYoutube.buscarVideoFutbolEnYoutube(BuscarVideoEnYoutube.java:31)
+</system-err></testcase></testsuite>

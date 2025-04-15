@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - BuscarVideoEnYoutube</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>BuscarVideoEnYoutube</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/co.qaconf.stepdefinitions.html">co.qaconf.stepdefinitions</a> &gt; BuscarVideoEnYoutube</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">4</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.299s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="abrirOpcionesMenu()"></a>
+<h3 class="failures">abrirOpcionesMenu()</h3>
+<span class="code">
+<pre>net.thucydides.core.webdriver.DriverConfigurationError: Could not instantiate class io.appium.java_client.AppiumDriver
+	at app//net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:181)
+	at app//net.thucydides.core.webdriver.WebDriverFacade.newProxyDriver(WebDriverFacade.java:169)
+	at app//net.thucydides.core.webdriver.WebDriverFacade.getProxiedDriver(WebDriverFacade.java:120)
+	at app//net.serenitybdd.core.webdriver.RemoteDriver.of(RemoteDriver.java:18)
+	at app//net.thucydides.core.webdriver.appium.AppiumConfiguration.getTargetPlatform(AppiumConfiguration.java:55)
+	at app//net.thucydides.core.webdriver.ElementLocatorFactorySelector.platformFor(ElementLocatorFactorySelector.java:52)
+	at app//net.thucydides.core.webdriver.ElementLocatorFactorySelector.getLocatorFor(ElementLocatorFactorySelector.java:42)
+	at app//net.thucydides.core.webdriver.ElementLocatorFactorySelector.getLocatorFor(ElementLocatorFactorySelector.java:31)
+	at app//net.thucydides.core.annotations.locators.SmartElementProxyCreator.proxyElements(SmartElementProxyCreator.java:21)
+	at app//net.thucydides.core.webdriver.DefaultPageObjectInitialiser.apply(DefaultPageObjectInitialiser.java:20)
+	at app//net.serenitybdd.core.pages.PageObject.setDriver(PageObject.java:167)
+	at app//net.serenitybdd.core.pages.PageObject.setDriver(PageObject.java:171)
+	at app//net.serenitybdd.core.pages.PageObject.&lt;init&gt;(PageObject.java:156)
+	at app//net.serenitybdd.screenplay.abilities.BrowseTheWeb.&lt;init&gt;(BrowseTheWeb.java:32)
+	at app//net.serenitybdd.screenplay.abilities.BrowseTheWeb.with(BrowseTheWeb.java:48)
+	at app//net.serenitybdd.screenplay.actors.OnlineCast.actorNamed(OnlineCast.java:43)
+	at app//net.serenitybdd.screenplay.actors.Stage.lambda$shineSpotlightOn$1(Stage.java:31)
+	at java.base@17.0.13/java.util.Optional.orElseGet(Optional.java:364)
+	at app//net.serenitybdd.screenplay.actors.Stage.shineSpotlightOn(Stage.java:31)
+	at app//net.serenitybdd.screenplay.actors.OnStage.theActorCalled(OnStage.java:76)
+	at app//co.qaconf.stepdefinitions.BuscarVideoEnYoutube.abrirOpcionesMenu(BuscarVideoEnYoutube.java:41)
+	at java.base@17.0.13/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.13/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.13/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: net.thucydides.core.webdriver.DriverConfigurationError: WebDriver was unable to create a new instance of type class io.appium.java_client.AppiumDriver
+WebDriver reported the following message: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.80.30'
+See below for more details.
+	at app//net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:152)
+	at app//net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:178)
+	... 23 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.80.30'
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:537)
+	at app//io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at app//io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:90)
+	at app//io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:102)
+	at app//io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at app//net.serenitybdd.core.webdriver.driverproviders.AppiumDriverProvider.newDriverUsingExternalServer(AppiumDriverProvider.java:61)
+	at app//net.serenitybdd.core.webdriver.driverproviders.AppiumDriverProvider.newInstance(AppiumDriverProvider.java:49)
+	at app//net.thucydides.core.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:164)
+	at app//net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:142)
+	... 24 more
+Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4', java.version: '17.0.13'
+Driver info: driver.version: RemoteDriver
+	at app//io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
+	at app//io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+	at app//io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:177)
+	at app//io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	... 33 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+	... 37 more
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:443)
+	at io.appium.java_client.internal.filters.AppiumIdempotencyFilter.lambda$apply$0(AppiumIdempotencyFilter.java:35)
+	at io.appium.java_client.internal.filters.AppiumUserAgentFilter.lambda$apply$0(AppiumUserAgentFilter.java:87)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:359)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	... 42 more
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1068)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.sendHeadersAsync(Http1Exchange.java:239)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$9(Exchange.java:539)
+	at java.net.http/jdk.internal.net.http.Exchange.checkFor407(Exchange.java:410)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$10(Exchange.java:543)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:543)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:386)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:378)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.nio.channels.UnresolvedAddressException
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:149)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:157)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:816)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:839)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185)
+	... 23 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="buscarVideoFutbolEnYoutube()"></a>
+<h3 class="failures">buscarVideoFutbolEnYoutube()</h3>
+<span class="code">
+<pre>net.thucydides.core.webdriver.DriverConfigurationError: Could not instantiate class io.appium.java_client.AppiumDriver
+	at app//net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:181)
+	at app//net.thucydides.core.webdriver.WebDriverFacade.newProxyDriver(WebDriverFacade.java:169)
+	at app//net.thucydides.core.webdriver.WebDriverFacade.getProxiedDriver(WebDriverFacade.java:120)
+	at app//net.serenitybdd.core.webdriver.RemoteDriver.of(RemoteDriver.java:18)
+	at app//net.thucydides.core.webdriver.appium.AppiumConfiguration.getTargetPlatform(AppiumConfiguration.java:55)
+	at app//net.thucydides.core.webdriver.ElementLocatorFactorySelector.platformFor(ElementLocatorFactorySelector.java:52)
+	at app//net.thucydides.core.webdriver.ElementLocatorFactorySelector.getLocatorFor(ElementLocatorFactorySelector.java:42)
+	at app//net.thucydides.core.webdriver.ElementLocatorFactorySelector.getLocatorFor(ElementLocatorFactorySelector.java:31)
+	at app//net.thucydides.core.annotations.locators.SmartElementProxyCreator.proxyElements(SmartElementProxyCreator.java:21)
+	at app//net.thucydides.core.webdriver.DefaultPageObjectInitialiser.apply(DefaultPageObjectInitialiser.java:20)
+	at app//net.serenitybdd.core.pages.PageObject.setDriver(PageObject.java:167)
+	at app//net.serenitybdd.core.pages.PageObject.setDriver(PageObject.java:171)
+	at app//net.serenitybdd.core.pages.PageObject.&lt;init&gt;(PageObject.java:156)
+	at app//net.serenitybdd.screenplay.abilities.BrowseTheWeb.&lt;init&gt;(BrowseTheWeb.java:32)
+	at app//net.serenitybdd.screenplay.abilities.BrowseTheWeb.with(BrowseTheWeb.java:48)
+	at app//net.serenitybdd.screenplay.actors.OnlineCast.actorNamed(OnlineCast.java:43)
+	at app//net.serenitybdd.screenplay.actors.Stage.lambda$shineSpotlightOn$1(Stage.java:31)
+	at java.base@17.0.13/java.util.Optional.orElseGet(Optional.java:364)
+	at app//net.serenitybdd.screenplay.actors.Stage.shineSpotlightOn(Stage.java:31)
+	at app//net.serenitybdd.screenplay.actors.OnStage.theActorCalled(OnStage.java:76)
+	at app//co.qaconf.stepdefinitions.BuscarVideoEnYoutube.buscarVideoFutbolEnYoutube(BuscarVideoEnYoutube.java:31)
+	at java.base@17.0.13/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.13/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.13/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: net.thucydides.core.webdriver.DriverConfigurationError: WebDriver was unable to create a new instance of type class io.appium.java_client.AppiumDriver
+WebDriver reported the following message: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.80.30'
+See below for more details.
+	at app//net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:152)
+	at app//net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:178)
+	... 23 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.80.30'
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:537)
+	at app//io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at app//io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:90)
+	at app//io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:102)
+	at app//io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at app//net.serenitybdd.core.webdriver.driverproviders.AppiumDriverProvider.newDriverUsingExternalServer(AppiumDriverProvider.java:61)
+	at app//net.serenitybdd.core.webdriver.driverproviders.AppiumDriverProvider.newInstance(AppiumDriverProvider.java:49)
+	at app//net.thucydides.core.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:164)
+	at app//net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:142)
+	... 24 more
+Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4', java.version: '17.0.13'
+Driver info: driver.version: RemoteDriver
+	at app//io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
+	at app//io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+	at app//io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:177)
+	at app//io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	... 33 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+	... 37 more
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:443)
+	at io.appium.java_client.internal.filters.AppiumIdempotencyFilter.lambda$apply$0(AppiumIdempotencyFilter.java:35)
+	at io.appium.java_client.internal.filters.AppiumUserAgentFilter.lambda$apply$0(AppiumUserAgentFilter.java:87)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:359)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	... 42 more
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1068)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.sendHeadersAsync(Http1Exchange.java:239)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$9(Exchange.java:539)
+	at java.net.http/jdk.internal.net.http.Exchange.checkFor407(Exchange.java:410)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$10(Exchange.java:543)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:543)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:386)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:378)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.nio.channels.UnresolvedAddressException
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:149)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:157)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:816)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:839)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185)
+	... 23 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="verificarBotonCompartirEnShortsConEnsure()"></a>
+<h3 class="failures">verificarBotonCompartirEnShortsConEnsure()</h3>
+<span class="code">
+<pre>net.thucydides.core.webdriver.DriverConfigurationError: Could not instantiate class io.appium.java_client.AppiumDriver
+	at app//net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:181)
+	at app//net.thucydides.core.webdriver.WebDriverFacade.newProxyDriver(WebDriverFacade.java:169)
+	at app//net.thucydides.core.webdriver.WebDriverFacade.getProxiedDriver(WebDriverFacade.java:120)
+	at app//net.serenitybdd.core.webdriver.RemoteDriver.of(RemoteDriver.java:18)
+	at app//net.thucydides.core.webdriver.appium.AppiumConfiguration.getTargetPlatform(AppiumConfiguration.java:55)
+	at app//net.thucydides.core.webdriver.ElementLocatorFactorySelector.platformFor(ElementLocatorFactorySelector.java:52)
+	at app//net.thucydides.core.webdriver.ElementLocatorFactorySelector.getLocatorFor(ElementLocatorFactorySelector.java:42)
+	at app//net.thucydides.core.webdriver.ElementLocatorFactorySelector.getLocatorFor(ElementLocatorFactorySelector.java:31)
+	at app//net.thucydides.core.annotations.locators.SmartElementProxyCreator.proxyElements(SmartElementProxyCreator.java:21)
+	at app//net.thucydides.core.webdriver.DefaultPageObjectInitialiser.apply(DefaultPageObjectInitialiser.java:20)
+	at app//net.serenitybdd.core.pages.PageObject.setDriver(PageObject.java:167)
+	at app//net.serenitybdd.core.pages.PageObject.setDriver(PageObject.java:171)
+	at app//net.serenitybdd.core.pages.PageObject.&lt;init&gt;(PageObject.java:156)
+	at app//net.serenitybdd.screenplay.abilities.BrowseTheWeb.&lt;init&gt;(BrowseTheWeb.java:32)
+	at app//net.serenitybdd.screenplay.abilities.BrowseTheWeb.with(BrowseTheWeb.java:48)
+	at app//net.serenitybdd.screenplay.actors.OnlineCast.actorNamed(OnlineCast.java:43)
+	at app//net.serenitybdd.screenplay.actors.Stage.lambda$shineSpotlightOn$1(Stage.java:31)
+	at java.base@17.0.13/java.util.Optional.orElseGet(Optional.java:364)
+	at app//net.serenitybdd.screenplay.actors.Stage.shineSpotlightOn(Stage.java:31)
+	at app//net.serenitybdd.screenplay.actors.OnStage.theActorCalled(OnStage.java:76)
+	at app//co.qaconf.stepdefinitions.BuscarVideoEnYoutube.verificarBotonCompartirEnShortsConEnsure(BuscarVideoEnYoutube.java:66)
+	at java.base@17.0.13/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.13/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.13/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: net.thucydides.core.webdriver.DriverConfigurationError: WebDriver was unable to create a new instance of type class io.appium.java_client.AppiumDriver
+WebDriver reported the following message: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.80.30'
+See below for more details.
+	at app//net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:152)
+	at app//net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:178)
+	... 23 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.80.30'
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:537)
+	at app//io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at app//io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:90)
+	at app//io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:102)
+	at app//io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at app//net.serenitybdd.core.webdriver.driverproviders.AppiumDriverProvider.newDriverUsingExternalServer(AppiumDriverProvider.java:61)
+	at app//net.serenitybdd.core.webdriver.driverproviders.AppiumDriverProvider.newInstance(AppiumDriverProvider.java:49)
+	at app//net.thucydides.core.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:164)
+	at app//net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:142)
+	... 24 more
+Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4', java.version: '17.0.13'
+Driver info: driver.version: RemoteDriver
+	at app//io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
+	at app//io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+	at app//io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:177)
+	at app//io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	... 33 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+	... 37 more
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:443)
+	at io.appium.java_client.internal.filters.AppiumIdempotencyFilter.lambda$apply$0(AppiumIdempotencyFilter.java:35)
+	at io.appium.java_client.internal.filters.AppiumUserAgentFilter.lambda$apply$0(AppiumUserAgentFilter.java:87)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:359)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	... 42 more
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1068)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.sendHeadersAsync(Http1Exchange.java:239)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$9(Exchange.java:539)
+	at java.net.http/jdk.internal.net.http.Exchange.checkFor407(Exchange.java:410)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$10(Exchange.java:543)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:543)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:386)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:378)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.nio.channels.UnresolvedAddressException
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:149)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:157)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:816)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:839)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185)
+	... 23 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="verificarBotonCompartirEnShortsConQuestion()"></a>
+<h3 class="failures">verificarBotonCompartirEnShortsConQuestion()</h3>
+<span class="code">
+<pre>net.thucydides.core.webdriver.DriverConfigurationError: Could not instantiate class io.appium.java_client.AppiumDriver
+	at app//net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:181)
+	at app//net.thucydides.core.webdriver.WebDriverFacade.newProxyDriver(WebDriverFacade.java:169)
+	at app//net.thucydides.core.webdriver.WebDriverFacade.getProxiedDriver(WebDriverFacade.java:120)
+	at app//net.serenitybdd.core.webdriver.RemoteDriver.of(RemoteDriver.java:18)
+	at app//net.thucydides.core.webdriver.appium.AppiumConfiguration.getTargetPlatform(AppiumConfiguration.java:55)
+	at app//net.thucydides.core.webdriver.ElementLocatorFactorySelector.platformFor(ElementLocatorFactorySelector.java:52)
+	at app//net.thucydides.core.webdriver.ElementLocatorFactorySelector.getLocatorFor(ElementLocatorFactorySelector.java:42)
+	at app//net.thucydides.core.webdriver.ElementLocatorFactorySelector.getLocatorFor(ElementLocatorFactorySelector.java:31)
+	at app//net.thucydides.core.annotations.locators.SmartElementProxyCreator.proxyElements(SmartElementProxyCreator.java:21)
+	at app//net.thucydides.core.webdriver.DefaultPageObjectInitialiser.apply(DefaultPageObjectInitialiser.java:20)
+	at app//net.serenitybdd.core.pages.PageObject.setDriver(PageObject.java:167)
+	at app//net.serenitybdd.core.pages.PageObject.setDriver(PageObject.java:171)
+	at app//net.serenitybdd.core.pages.PageObject.&lt;init&gt;(PageObject.java:156)
+	at app//net.serenitybdd.screenplay.abilities.BrowseTheWeb.&lt;init&gt;(BrowseTheWeb.java:32)
+	at app//net.serenitybdd.screenplay.abilities.BrowseTheWeb.with(BrowseTheWeb.java:48)
+	at app//net.serenitybdd.screenplay.actors.OnlineCast.actorNamed(OnlineCast.java:43)
+	at app//net.serenitybdd.screenplay.actors.Stage.lambda$shineSpotlightOn$1(Stage.java:31)
+	at java.base@17.0.13/java.util.Optional.orElseGet(Optional.java:364)
+	at app//net.serenitybdd.screenplay.actors.Stage.shineSpotlightOn(Stage.java:31)
+	at app//net.serenitybdd.screenplay.actors.OnStage.theActorCalled(OnStage.java:76)
+	at app//co.qaconf.stepdefinitions.BuscarVideoEnYoutube.verificarBotonCompartirEnShortsConQuestion(BuscarVideoEnYoutube.java:53)
+	at java.base@17.0.13/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.13/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.13/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: net.thucydides.core.webdriver.DriverConfigurationError: WebDriver was unable to create a new instance of type class io.appium.java_client.AppiumDriver
+WebDriver reported the following message: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.80.30'
+See below for more details.
+	at app//net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:152)
+	at app//net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:178)
+	... 23 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'MacBook-Pro-de-Juan.local', ip: '192.168.80.30'
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:537)
+	at app//io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at app//io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:90)
+	at app//io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:102)
+	at app//io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at app//net.serenitybdd.core.webdriver.driverproviders.AppiumDriverProvider.newDriverUsingExternalServer(AppiumDriverProvider.java:61)
+	at app//net.serenitybdd.core.webdriver.driverproviders.AppiumDriverProvider.newInstance(AppiumDriverProvider.java:49)
+	at app//net.thucydides.core.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:164)
+	at app//net.thucydides.core.webdriver.WebDriverFactory.newWebdriverInstance(WebDriverFactory.java:142)
+	... 24 more
+Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4', java.version: '17.0.13'
+Driver info: driver.version: RemoteDriver
+	at app//io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
+	at app//io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+	at app//io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:177)
+	at app//io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	... 33 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+	... 37 more
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:443)
+	at io.appium.java_client.internal.filters.AppiumIdempotencyFilter.lambda$apply$0(AppiumIdempotencyFilter.java:35)
+	at io.appium.java_client.internal.filters.AppiumUserAgentFilter.lambda$apply$0(AppiumUserAgentFilter.java:87)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:359)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	... 42 more
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1068)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.sendHeadersAsync(Http1Exchange.java:239)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$9(Exchange.java:539)
+	at java.net.http/jdk.internal.net.http.Exchange.checkFor407(Exchange.java:410)
+	at java.net.http/jdk.internal.net.http.Exchange.lambda$responseAsyncImpl0$10(Exchange.java:543)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:543)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:386)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:378)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:408)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:449)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2340)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:439)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:341)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.nio.channels.UnresolvedAddressException
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:149)
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:157)
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:816)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:839)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185)
+	... 23 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">abrirOpcionesMenu()</td>
+<td class="failures">0.009s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">buscarVideoFutbolEnYoutube()</td>
+<td class="failures">0.007s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">verificarBotonCompartirEnShortsConEnsure()</td>
+<td class="failures">0.008s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">verificarBotonCompartirEnShortsConQuestion()</td>
+<td class="failures">0.275s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.12</a> at 15/04/2025, 12:30:59 a. m.</p>
+</div>
+</div>
+</body>
+</html>
