@@ -3,15 +3,14 @@ services:
   jenkins:
     build:
       context: .
-      dockerfile: Dockerfile  # Asegúrate que el nombre y la ubicación sean correctos.
+      dockerfile: Dockerfile
     container_name: jenkins
     ports:
-      - "8080:8080"    # Interfaz web de Jenkins
-      - "50000:50000"  # Comunicación entre Jenkins master y sus agentes (si se usan)
+      - "8080:8080"
+      - "50000:50000"
     volumes:
       - jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
-      # Monta el proyecto local en una ruta externa al workspace de Jenkins.
       - /Users/juanfernandez/AquaProjects/mobile-appium-automation-serenitybdd:/opt/mobile-appium-automation-serenitybdd
 
 volumes:

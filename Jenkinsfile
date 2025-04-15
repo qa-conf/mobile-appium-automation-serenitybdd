@@ -27,7 +27,7 @@ pipeline {
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
-                reportDir: 'mobile-appium-automation-serenitybdd/target/site/serenity', // Ajusta la ruta si es necesaria
+                reportDir: 'mobile-appium-automation-serenitybdd/target/site/serenity',
                 reportFiles: 'index.html, serenity-summary.html',
                 reportName: 'Reporte Serenity'
             ])
