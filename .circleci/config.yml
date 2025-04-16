@@ -89,6 +89,14 @@ jobs:
             # Finalizar el emulador al terminar los tests
             echo "Finalizando el emulador..."
             kill $EMULATOR_PID
+      - store_test_results:
+          path: target/site/serenity
+          when: always
+          paths:
+            - "*.xml"
+      - store_artifacts:
+          path: target/site/serenity
+          when: always
 
 workflows:
   version: 2
