@@ -84,7 +84,7 @@ jobs:
 
             # Ejecutar pruebas con Gradle
             echo "Ejecutando tests con Gradle..."
-            ./gradlew test --info --stacktrace
+            ./gradlew clean test -Denvironment=android aggregate reports
 
             # Finalizar el emulador al terminar los tests
             echo "Finalizando el emulador..."
