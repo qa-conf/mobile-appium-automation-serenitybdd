@@ -4,7 +4,6 @@ import co.qaconf.interactions.EscribirEnInputs;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
 
 import static co.qaconf.userinterfaces.HomePage.CAMPO_BUSCAR_VIDEOS;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
