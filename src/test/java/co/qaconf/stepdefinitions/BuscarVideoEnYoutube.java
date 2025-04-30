@@ -11,6 +11,7 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -26,6 +27,7 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClic
 public class BuscarVideoEnYoutube {
 
     @Test
+    @DisplayName("Buscar un video de futbol en Youtube")
     public void buscarVideoFutbolEnYoutube() {
         OnStage.setTheStage(new OnlineCast());
         theActorCalled("Juan").attemptsTo(
@@ -36,6 +38,7 @@ public class BuscarVideoEnYoutube {
     }
 
     @Test
+    @DisplayName("Verificar la navegacion por las opciones de Menud e yOutube como Suscripciones y Principal")
     public void abrirOpcionesMenu() {
         OnStage.setTheStage(new OnlineCast());
         theActorCalled("Juan").attemptsTo(
@@ -48,6 +51,7 @@ public class BuscarVideoEnYoutube {
 
 
     @Test
+    @DisplayName("Verificar que en Shorts la opcion COMPARTIR esta visible - Usando Question")
     public void verificarBotonCompartirEnShortsConQuestion() {
         OnStage.setTheStage(new OnlineCast());
         theActorCalled("Juan").attemptsTo(
@@ -61,6 +65,7 @@ public class BuscarVideoEnYoutube {
 
 
     @Test
+    @DisplayName("Verificar que en Shorts la opcion COMPARTIR esta visible - Usando Ensure")
     public void verificarBotonCompartirEnShortsConEnsure() {
         OnStage.setTheStage(new OnlineCast());
         theActorCalled("Juan").attemptsTo(
