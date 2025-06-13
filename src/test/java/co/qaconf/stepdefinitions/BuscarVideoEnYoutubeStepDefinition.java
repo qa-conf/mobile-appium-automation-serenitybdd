@@ -1,29 +1,35 @@
-package co.qaconf.stedefinitions;
+package co.qaconf.stepdefinitions;
 
 import co.qaconf.tasks.BuscarVideo;
-import net.serenitybdd.junit5.SerenityJUnit5Extension;
+import io.cucumber.java.es.Cuando;
+import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 
 import static co.qaconf.userinterfaces.HomePage.BOTON_BUSCAR;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
 
-@ExtendWith(SerenityJUnit5Extension.class)
-public class BuscarVideoEnYoutube {
+public class BuscarVideoEnYoutubeStepDefinition {
 
-    @Test
-    public void buscarVideoFutbolEnYoutube(){
+    @Dado("que Juan esta en la app")
+    public void queJuanEstaEnLaApp() {
         OnStage.setTheStage(new OnlineCast());
+    }
+
+    @Cuando("busco el {string}")
+    public void buscoVideoYoutube(String videoBuscar) {
         theActorCalled("Juan").attemptsTo(
                 WaitUntil.the(BOTON_BUSCAR, isClickable()).forNoMoreThan(10).seconds(),
                 Click.on(BOTON_BUSCAR),
-                BuscarVideo.enYoutube()
+                BuscarVideo.enYoutube(videoBuscar)
         );
     }
+    @Entonces("deberia de ver una lista de videos que quiera ver")
+    public void deberiaDeVerUnaListaDeVideosQueQuieraVer() {
 
+    }
 }

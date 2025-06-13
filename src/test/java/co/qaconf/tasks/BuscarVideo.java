@@ -11,15 +11,21 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class BuscarVideo implements Task {
 
+    private String videoBuscar;
+
+    public BuscarVideo(String videoBuscar){
+        this.videoBuscar = videoBuscar;
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Click.on(CAMPO_BUSCAR_VIDEOS),
-                EscribirEnInputs.elTexto("Gol de Roberto Carlos")
+                EscribirEnInputs.elTexto(videoBuscar)
         );
     }
 
-    public static BuscarVideo enYoutube(){
-        return instrumented(BuscarVideo.class);
+    public static BuscarVideo enYoutube(String videoBuscar){
+        return instrumented(BuscarVideo.class, videoBuscar);
     }
 }

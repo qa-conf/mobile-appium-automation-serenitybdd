@@ -28,12 +28,14 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation 'io.appium:java-client:8.3.0'
+    testImplementation 'junit:junit:4.13.2'
     testImplementation "org.seleniumhq.selenium:selenium-java:4.18.1"
     testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}"
     testImplementation "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}"
     testImplementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}"
     testImplementation "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}"
     testImplementation "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}"
+    testImplementation "net.serenity-bdd:serenity-cucumber:${serenityCoreVersion}"
 }
 
 test {
