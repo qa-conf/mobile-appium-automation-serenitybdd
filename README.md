@@ -21,6 +21,9 @@ Este repositorio contiene un proyecto de automatización mobile para Android e i
 - **Propósito:** Integración continua y pruebas automatizadas utilizando CircleCI, tiene los mismos Test de la rama de **android-ios**.
 - **Últimos cambios:** Ajustes en `DisplayName` en pruebas y limpieza de librerías innecesarias.
 
+### `cucumber`
+- **Propósito:** Automatizacion realizada en Android pero usando Cucumber
+
 ### `ejemplo-ios`
 - **Propósito:** Contiene ejemplos de automatización para dispositivos iOS. Configuración inicial de iOS con ajustes en la configuración de Appium. Es el test basico como lo esta en la rama main.
 - **Nota:** Este ejemplo no genera reportes.
